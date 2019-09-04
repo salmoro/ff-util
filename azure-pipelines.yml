@@ -17,7 +17,8 @@ steps:
     npm run build
   displayName: 'Run Build'
 
-- script: |
-    npm publish
-  displayName: 'Publish to NPM'
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishEndpoint: 'Npm registry'
   
