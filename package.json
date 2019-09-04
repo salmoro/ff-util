@@ -1,0 +1,34 @@
+{
+  "name": "ff-util",
+  "version": "1.0.1",
+  "description": "A set of useful utilities for running ffmpeg with node",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salmoro/ffmpeg-utils.git"
+  },
+  "keywords": [
+    "ffmpeg"
+  ],
+  "author": "Shlomo Morosow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salmoro/ffmpeg-utils/issues"
+  },
+  "homepage": "https://github.com/salmoro/ffmpeg-utils#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.4",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  }
+}
