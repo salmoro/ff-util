@@ -1,6 +1,7 @@
 # FF Util
 A set of useful utilities for running ffmpeg with node
 
+[![Build Status](https://dev.azure.com/shlomorosow/ffmpeg-utils/_apis/build/status/salmoro.ff-util?branchName=master)](https://dev.azure.com/shlomorosow/ffmpeg-utils/_build/latest?definitionId=1&branchName=master)
 
 ## Installation
 First make sure you have the ffmpeg binary [downloaded](https://ffmpeg.org/download.html) and globally accessible on your machine.
