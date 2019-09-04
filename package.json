@@ -1,6 +1,6 @@
 {
   "name": "ff-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of useful utilities for running ffmpeg with node",
   "main": "dist/index.js",
   "scripts": {
