@@ -1,6 +1,6 @@
 
 jobs:
-  - default
+  - job default
     pool:
       vmImage: 'ubuntu-latest'
     steps:
@@ -10,7 +10,7 @@ jobs:
         npm run build
       displayName: 'Run Build'
 
-  - master
+  - job master
     trigger:
     - master
     pool:
