@@ -17,8 +17,7 @@ steps:
     npm run build
   displayName: 'Run Build'
 
-- task: Npm@1
-  inputs:
-    command: 'publish'
-    customRegistry: 'useFeed'
-    customFeed: '2b0beb21-477a-4fc4-b91e-6e96b230fc6d'
+- script: |
+    npm publish
+  displayName: 'Publish to NPM'
+  
