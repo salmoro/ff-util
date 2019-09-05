@@ -1,27 +1,10 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
 
-trigger:
-- master
-
-pr:
-  - master
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-steps:
-- script: npm install
-  displayName: 'Run install pacakges'
-
-- script: |
-    npm run build
-  displayName: 'Run Build'
-
-- task: Npm@1
-  inputs:
-    command: 'publish'
-    publishEndpoint: 'Npm registry'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: npm install
+    displayName: 'Run install pacakges'
+  - script: |
+      npm run build
+    displayName: 'Run Build'
   
