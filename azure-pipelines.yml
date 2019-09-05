@@ -1,6 +1,12 @@
 
   pool:
     vmImage: 'ubuntu-latest'
+  trigger:
+    branches:
+      include:
+      - *
+      exclude:
+      - master
   steps:
   - script: npm install
     displayName: 'Run install packages'
@@ -10,4 +16,6 @@
   - script: |
       npm run ci
     displayName: 'Run Build/lint/test'
+  - publish: /var/cache/apt/archives
+    artifact: apt cache
   
