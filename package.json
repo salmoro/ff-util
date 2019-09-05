@@ -1,6 +1,6 @@
 {
   "name": "ff-util",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "A set of useful utilities for running ffmpeg with node",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "tslint --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json",
+    "ci": "npm run lint && npm run test && npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,11 @@
     "url": "https://github.com/salmoro/ffmpeg-utils/issues"
   },
   "homepage": "https://github.com/salmoro/ffmpeg-utils#readme",
-  "devDependencies": {
+  "dependencies": {
     "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.4",
+    "@types/node": "^12.7.4"
+  },
+  "devDependencies": {
     "jest": "^24.9.0",
     "ts-jest": "^24.0.2",
     "tslint": "^5.19.0",
