@@ -1,6 +1,6 @@
 {
   "name": "ff-util",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A set of useful utilities for running ffmpeg with node",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "tslint --project tsconfig.json",
-    "ci": "npm run lint && npm run test && npm run build && npm publish"
+    "ci": "npm run lint && npm run test && npm run build",
+    "cd": "npm run ci && npm publish"
   },
   "repository": {
     "type": "git",
