@@ -6,6 +6,8 @@ steps:
 - script: |
     sudo apt update && sudo apt install ffmpeg
   displayName: 'Install ffmpeg (test dependency)'
+- script: npm install
+    displayName: 'Run install packages'
 - script: |
     npm run ci
   displayName: 'Run Build/lint/test'
