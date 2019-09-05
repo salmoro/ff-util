@@ -4,8 +4,10 @@ pool:
   vmImage: 'ubuntu-latest'
 steps:
 - script: |
-    sudo apt update && sudo apt install ffmpeg
-  displayName: 'Install ffmpeg (test dependency)'
+    if ! dpkg-query -W -f='${Status}' ffmpeg | grep "ok installed"; then sudo apt update && sudo apt install ffmpeg; fi
+  displayName: 'Install ffmpeg (test dependency) if not already installed'
+- script: npm install
+    displayName: 'Run install packages'
 - script: |
     npm run ci
   displayName: 'Run Build/lint/test'
@@ -13,3 +15,5 @@ steps:
   inputs:
     command: 'publish'
     publishEndpoint: 'Npm registry'
+- publish: /usr/bin/ffmpeg
+  artifact: apt cache
