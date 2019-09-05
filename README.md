@@ -34,7 +34,7 @@ const args = [
 ]
 
 const logger = (stdOut: string) => {
-    const parsed = parse({ffProgressLine}))
+    const parsed = parse({ffProgressLine: stdOut})
     console.log({parsed})
 }
 
