@@ -11,8 +11,8 @@
   - script: npm install
     displayName: 'Run install packages'
   - script: |
-      sudo apt update && sudo apt install ffmpeg
-    displayName: 'Install ffmpeg (test dependency)'
+      if ! dpkg-query -W -f='${Status}' ffmpe | grep "ok installed"; then sudo apt update && sudo apt install ffmpeg; fi
+    displayName: 'Install ffmpeg (test dependency) if not already installed'
   - script: |
       npm run ci
     displayName: 'Run Build/lint/test'
