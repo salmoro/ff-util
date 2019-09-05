@@ -1,10 +1,10 @@
 {
   "name": "ff-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A set of useful utilities for running ffmpeg with node",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -d",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
