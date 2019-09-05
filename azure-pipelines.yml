@@ -16,6 +16,6 @@
   - script: |
       npm run ci
     displayName: 'Run Build/lint/test'
-  - publish: /var/cache/apt/archives
+  - publish: /usr/bin/ffmpeg
     artifact: apt cache
   

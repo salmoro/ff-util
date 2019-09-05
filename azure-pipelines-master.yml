@@ -15,5 +15,5 @@ steps:
   inputs:
     command: 'publish'
     publishEndpoint: 'Npm registry'
-- publish: /var/cache/apt/archives
+- publish: /usr/bin/ffmpeg
   artifact: apt cache
