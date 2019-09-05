@@ -2,6 +2,8 @@
 A set of useful utilities for running ffmpeg with node
 
 [![Build Status](https://dev.azure.com/shlomorosow/ffmpeg-utils/_apis/build/status/salmoro.ff-util?branchName=master)](https://dev.azure.com/shlomorosow/ffmpeg-utils/_build/latest?definitionId=1&branchName=master)
+[![npm version](https://badge.fury.io/js/ff-util.svg)](https://badge.fury.io/js/ff-util)
+[![Coverage Status](https://coveralls.io/repos/github/salmoro/ff-util/badge.svg?branch=master)](https://coveralls.io/github/salmoro/ff-util?branch=master)
 
 ## Installation
 First make sure you have the ffmpeg binary [downloaded](https://ffmpeg.org/download.html) and globally accessible on your machine.
