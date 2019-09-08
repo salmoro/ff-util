@@ -16,6 +16,9 @@
   - script: |
       npm run ci
     displayName: 'Run Build/lint/test'
+  - script: |
+      export COVERALLS_REPO_TOKEN=$(COVERALLS_REPO_TOKEN) && export COVERALLS_SERVICE_NAME=$(COVERALLS_SERVICE_NAME) && npm run test:coverage
+    displayName: 'Publish test coverage'
   - publish: /usr/bin/ffmpeg
     artifact: apt cache
   

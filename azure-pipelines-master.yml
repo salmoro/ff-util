@@ -1,5 +1,8 @@
 trigger:
-- master
+    branches:
+      include:
+      - master
+pr: none
 pool:
   vmImage: 'ubuntu-latest'
 steps:
@@ -15,5 +18,8 @@ steps:
   inputs:
     command: 'publish'
     publishEndpoint: 'Npm registry'
+- script: |
+    export COVERALLS_REPO_TOKEN=$(COVERALLS_REPO_TOKEN) && export COVERALLS_SERVICE_NAME=$(COVERALLS_SERVICE_NAME) && npm run test:coverage
+  displayName: 'Publish test coverage'
 - publish: /usr/bin/ffmpeg
   artifact: apt cache
